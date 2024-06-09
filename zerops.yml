@@ -1,11 +1,11 @@
 zerops:
   - setup: app
     build:
+      os: ubuntu
       base:
         - php@8.3
         - nodejs@18
       buildCommands:
-        - zsc noop
         - composer install --optimize-autoloader --no-dev
         - npm install
         - npm run build
@@ -21,6 +21,7 @@ zerops:
     #       port: 80
     #       path: /up
     run:
+      os: ubuntu
       base: php-nginx@8.3
       siteConfigPath: site.conf.tmpl
       envVariables:
