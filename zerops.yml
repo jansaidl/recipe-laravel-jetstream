@@ -1,6 +1,7 @@
 zerops:
   - setup: app
     build:
+      os: ubuntu
       base:
         - php@8.3
         - nodejs@18
